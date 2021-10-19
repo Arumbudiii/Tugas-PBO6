@@ -1,0 +1,87 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+    <header class="p-3" style="background-color: #415188;">
+        <div class="container">
+          <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+            <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+              <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"/></svg>
+            </a>
+            <h2>The Ocean</h2>
+            <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+              <li><a href="#" class="nav-link px-2 text-secondary">Home</a></li>
+              <li><a href="#" class="nav-link px-2 text-white">Features</a></li>
+              <li><a href="#" class="nav-link px-2 text-white">Layanan</a></li>
+              <li><a href="#" class="nav-link px-2 text-white">About</a></li>
+            </ul>
+    
+            <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
+              <input type="search" class="form-control form-control-dark" placeholder="Search..." aria-label="Search">
+            </form>
+    
+            <div class="text-end">
+              <button type="button" class="btn btn-outline-light me-2">Login</button>
+              <button type="button" class="btn btn-warning">Sign-up</button>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="container">
+        <div class="px-4 py-5 my-5 text-center">
+            <img class="d-block mx-auto mb-4" src="{% static 'image/sailing.jpg' %}" alt="" width="150" height="150">
+            <h1 class="display-5 fw-bold">The Ocean</h1>
+            <div class="col-lg-6 mx-auto">
+              <p class="lead mb-4" style="background-color: #8fd1e2;"> {{s}} </p>
+              
+            </div>
+          </div>
+          <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="{% static 'image/Peta.jpg' %}" class="d-block w-100" alt="Peta Indonesia" width="200" height="300">
+                <div class="carousel-caption d-none d-md-block">
+                  
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src=" {% static 'image/ the sea of the sky.png' %}" class="d-block w-100" alt="Hewan Laut" width="200" height="300">
+                <div class="carousel-caption d-none d-md-block">
+                  
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="{{% static 'image/koi.png' %}" class="d-block w-100" alt="Kumpulan Ikan" width="200" height="300">
+                <div class="carousel-caption d-none d-md-block">
+                  
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+            </div>
+      </div>
+      <br> <br>
+       <div class="card, align-center" style="width: 18rem; background-color:rgba(157, 199, 241, 0.575); panding-right :"> 
+
+  <div class="card-body">
+<h5 style =" font-family:Papyrus;"> <b>Ajukan Pertanyaan terkait : </b> </h5><br>
+{% for mn in menu %}
+<p style =" font-family:Monaco;"> {{ mn | upper}} </p>
+{% endfor %}
+<p style =" font-family:Monaco;"> {{ akh | lower}} </p>
+  </div>
+</div>
+{% endblock %}
+            
